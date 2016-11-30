@@ -1,0 +1,21 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "com.example.myapp"
+        },
+        "com.rensanning.cordova.helloworld": {
+            "PACKAGE_NAME": "com.example.myapp"
+        },
+        "com.rensanning.cordova.carrier": {
+            "PACKAGE_NAME": "com.example.myapp"
+        }
+    },
+    "dependent_plugins": {}
+}

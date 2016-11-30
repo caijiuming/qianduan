@@ -1,0 +1,69 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {
+            "res/xml/config.xml": {
+                "parents": {
+                    "/*": [
+                        {
+                            "xml": "<feature name=\"Whitelist\"><param name=\"android-package\" value=\"org.apache.cordova.whitelist.WhitelistPlugin\" /><param name=\"onload\" value=\"true\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"CarrierPlugin\"><param name=\"android-package\" value=\"com.rensanning.cordova.carrier.CarrierPlugin\" /></feature>",
+                            "count": 1
+                        }
+                    ]
+                }
+            },
+            "AndroidManifest.xml": {
+                "parents": {
+                    "/*": [
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.READ_PHONE_STATE\" />",
+                            "count": 1
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "installed_plugins": {
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "com.example.myapp"
+        },
+        "com.rensanning.cordova.helloworld": {
+            "PACKAGE_NAME": "com.example.myapp"
+        },
+        "com.rensanning.cordova.carrier": {
+            "PACKAGE_NAME": "com.example.myapp"
+        }
+    },
+    "dependent_plugins": {},
+    "modules": [
+        {
+            "id": "com.rensanning.cordova.helloworld.helloworld",
+            "file": "plugins/com.rensanning.cordova.helloworld/www/hello_world.js",
+            "pluginId": "com.rensanning.cordova.helloworld",
+            "clobbers": [
+                "HelloWorld"
+            ]
+        },
+        {
+            "id": "com.rensanning.cordova.carrier.carrier",
+            "file": "plugins/com.rensanning.cordova.carrier/www/carrier.js",
+            "pluginId": "com.rensanning.cordova.carrier",
+            "clobbers": [
+                "Carrier"
+            ]
+        }
+    ],
+    "plugin_metadata": {
+        "cordova-plugin-whitelist": "1.3.0",
+        "com.rensanning.cordova.helloworld": "0.0.1",
+        "com.rensanning.cordova.carrier": "0.0.1"
+    }
+}

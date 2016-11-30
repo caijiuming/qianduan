@@ -1,0 +1,1 @@
+function onSuccess(e){alert("Result: "+e)}function onFailure(e){alert("Failure: "+e)}document.getElementById("testBtn").addEventListener("click",function(){console.log("click"),HelloWorld.say()}),document.getElementById("testNative").addEventListener("click",function(){console.log("native"),Carrier.getCarrierCode(onSuccess,onFailure)});

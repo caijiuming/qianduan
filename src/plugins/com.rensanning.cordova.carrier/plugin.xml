@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    id="com.rensanning.cordova.carrier"
+    version="0.0.1">
+    <name>CarrierPlugin</name>
+    <description>CarrierPlugin Description</description>
+    <author>rensanning</author>
+    <license>Apache 2.0 License</license>
+    <engines>
+        <engine name="cordova" version=">=3.0.0" />
+    </engines>
+    <js-module src="www/carrier.js" name="carrier">
+        <clobbers target="Carrier" />
+    </js-module>
+    <platform name="android">
+        <source-file src="src/android/CarrierPlugin.java" target-dir="src/com/rensanning/cordova/carrier" />
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="CarrierPlugin">
+                <param name="android-package" value="com.rensanning.cordova.carrier.CarrierPlugin"/>
+            </feature>
+        </config-file>
+        <config-file target="AndroidManifest.xml" parent="/*">
+            <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+        </config-file>
+    </platform>
+</plugin>
